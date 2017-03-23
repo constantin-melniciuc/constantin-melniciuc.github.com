@@ -1,0 +1,39 @@
+.loader {
+  color: $white;
+  font-size: 2rem;
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform .6s, opacity .3s, visibility .3s;
+  visibility: visible;
+
+  .loaded & {
+    opacity: 0;
+    transform: translateY(90px) scale(0.8);
+    visibility: hidden;
+  }
+
+  span {
+    animation: loader .7s infinite;
+  }
+
+  @for $i from 1 through 7 {
+    span:nth-child(#{$i}) {
+      animation-delay: ($i * .1s);
+    }
+  }
+}
+
+@keyframes loader {
+  0% {
+    color: rgba($red-600, .5);
+  }
+
+  50% {
+    color: rgba($green-600, .5);
+  }
+
+  100% {
+
+    color: rgba($blue-600, .5);
+  }
+}

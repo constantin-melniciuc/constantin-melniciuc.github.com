@@ -1,0 +1,64 @@
+.star {
+  display: none;
+  height: 200%;
+  left: 0;
+  position: fixed;
+  top: -50%;
+  width: 100%;
+  z-index: -1;
+
+  .star--init & {
+    display: block;
+  }
+
+  &__item {
+    animation: star 2s infinite linear forwards;
+    animation-play-state: paused;
+    background: $white;
+    border-radius: 100%;
+    box-shadow: 0 0 7px 4px rgba($white, .5);
+    height: 2px;
+    left: random(100) + %;
+    position: absolute;
+    top: random(100) + %;
+    width: 2px;
+
+    .star--init & {
+      animation-play-state: running;
+    }
+
+    @for $i from 1 through 222 {
+      &:nth-child(#{$i}) {
+        $duration: #{($i/10*random(10)) + s};
+        $size: random(7)+px;
+        $color: hsl(random(360), 50%, 70%);
+        box-shadow: 0 0 7px $size rgba($white, .5);
+        animation-duration: $duration;
+        left: random(100) + %;
+        top: random(100) + %;
+      }
+    }
+  }
+}
+
+@keyframes star {
+  @for $i from 1 through 10 {
+    0% {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    10% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 0;
+      transform: translate(0, ($i*25) + px);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}

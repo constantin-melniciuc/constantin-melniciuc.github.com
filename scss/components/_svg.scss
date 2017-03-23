@@ -1,0 +1,327 @@
+.svg-box {
+  height: 100vh;
+  position: relative;
+
+  &.active {
+    .yc-logo,
+    &::before,
+    &::after {
+      animation-play-state: running;
+      opacity: 1;
+      transition-delay: 33s;
+    }
+
+    path {
+      stroke-dashoffset: 2000;
+
+      &.apple {
+        stroke-dasharray: 5873.69384765625;
+        animation: svg 2s linear forwards ;
+        animation-iteration-count: 1;
+        animation-delay: 1s;
+      }
+
+      &.sleep {
+        stroke-dasharray: 17333.576171875;
+        animation: svg 2s linear forwards ;
+        animation-iteration-count: 1;
+        animation-delay: 4s;
+      }
+
+      &.challenge {
+        stroke-dasharray: 8934.4521484375;
+        animation: svg 2s linear forwards ;
+        animation-iteration-count: 1;
+        animation-delay: 6s;
+      }
+
+      &.beer {
+        stroke-dasharray: 7135.662109375;
+        animation: svg 2s linear forwards ;
+        animation-iteration-count: 1;
+        animation-delay: 8s;
+      }
+
+      &.slack {
+        stroke-dasharray: 8984.9052734375;
+        animation: svg 2s linear forwards ;
+        animation-iteration-count: 1;
+        animation-delay: 10.5s;
+      }
+
+      &.spotify {
+        stroke-dasharray: 11097.08203125;
+        animation: svg 2s linear forwards ;
+        animation-iteration-count: 1;
+        animation-delay: 12.5s;
+      }
+
+      &.stack-overflow {
+        stroke-dasharray: 14712.498046875;
+        animation: svg 2s linear forwards ;
+        animation-iteration-count: 1;
+        animation-delay: 14.5s;
+      }
+
+      &.bomb {
+        stroke-dasharray: 8755.23046875;
+        animation: svg 2s linear forwards ;
+        animation-iteration-count: 1;
+        animation-delay: 18s;
+      }
+
+      &.learn {
+        stroke-dasharray: 10533.5693359375;
+        animation: svg 2s linear forwards ;
+        animation-iteration-count: 1;
+        animation-delay: 20.5s;
+      }
+
+      &.battery {
+        stroke-dasharray: 15436.25390625;
+        animation: svg 2s linear forwards ;
+        animation-iteration-count: 1;
+        animation-delay: 22s;
+      }
+
+      &.yt {
+        stroke-dasharray: 7815.07958984375;
+        animation: svg 2s linear forwards ;
+        animation-iteration-count: 1;
+        animation-delay: 24s;
+      }
+
+      &.heart {
+        stroke-dasharray: 10626.10546875;
+        animation: svg 2s linear forwards ;
+        animation-iteration-count: 1;
+        animation-delay: 26s;
+      }
+
+      &.hand {
+        stroke-dasharray: 10755.9404296875;
+        animation: svg 2s linear forwards ;
+        animation-iteration-count: 1;
+        animation-delay: 27.5s;
+      }
+
+      &.steam {
+        stroke-dasharray: 10897.6435546875;
+        animation: svg 2s linear forwards ;
+        animation-iteration-count: 1;
+        animation-delay: 30.5s;
+      }
+    }
+  }
+
+  &::before,
+  &::after {
+    animation-play-state: paused;
+    border-radius: 100%;
+    content: '';
+    display: block;
+    height: 200px;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transition: opacity .8s;
+    width: 200px;
+  }
+
+  &::before {
+    animation: pulse 1s infinite;
+    background-color: $white;
+    z-index: 5;
+  }
+
+  &::after {
+    animation: sonar 1s infinite;
+    background-color: rgba($white, .5);
+    transform: scale(.85);
+  }
+
+  path {
+    fill: transparent;
+    stroke-dashoffset: 0;
+    stroke-width: 30px;
+    stroke: $white;
+    opacity: 0;
+
+    &.apple {
+      fill: $green-400;
+    }
+
+    &.deploy {//to update to something more like sleep/sex
+      fill: hsl(random(360), 60%, 60%);
+    }
+
+    &.challenge {
+      fill: $yellow;
+    }
+
+    &.beer {
+      fill: $orange;
+    }
+
+    &.slack {
+      fill: $green-600;
+    }
+
+    &.spotify {
+      fill: $green-400;
+    }
+
+    &.stack-overflow {
+      fill: $orange;
+    }
+
+    &.bomb {
+      fill: $black;
+    }
+
+    &.learn {
+      fill: $black;
+    }
+
+    &.battery {//to update for something more fail-like
+      fill: hsl(random(360), 60%, 60%);
+    }
+
+    &.yt {
+      fill: $red-600;
+    }
+
+    &.heart {
+      fill: $red-400;
+    }
+
+    &.hand {
+      fill: $yellow;
+    }
+
+    &.steam {
+      fill: hsl(random(360), 60%, 60%);
+    }
+  }
+
+  svg {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+  }
+
+  .yc-logo {
+    background-image: url('../img/yc-white.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 105%;
+    border-radius: 100%;
+    display: block;
+    height: 160px;
+    left: 50%;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transition: opacity .4s;
+    width: 160px;
+    z-index: 6;
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(.85);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(.85);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+
+  80% {
+    transform: scale(.85);
+  }
+
+  100% {
+    transform: scale(.85);
+  }
+}
+
+@keyframes sonar {
+  0% {
+    background-color: rgba($orange, .5);
+    transform: scale(.85);
+  }
+
+  20% {
+    background-color: rgba($orange, 0);
+    transform: scale(1.5);
+  }
+
+  21% {
+    background-color: rgba($orange, .5);
+    transform: scale(.85);
+  }
+
+
+  62% {
+    background-color: rgba($orange, 0);
+    transform: scale(1.5);
+  }
+
+  63% {
+    background-color: rgba($orange, .5);
+    transform: scale(.85);
+  }
+
+  100% {
+    background-color: rgba($orange, .5);
+    transform: scale(.85);
+  }
+}
+
+
+@keyframes svg {
+  0% {
+    opacity: 0;
+    stroke-dasharray: 1000;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+    stroke-dasharray: 12876.25390625;
+  }
+
+  80% {
+    fill: $white;
+    opacity: 1;
+    stroke-dasharray: 12876.25390625;
+  }
+
+  100% {
+    opacity: 0;
+    stroke-dasharray: 12876.25390625;
+  }
+}

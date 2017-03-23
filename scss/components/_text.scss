@@ -1,0 +1,61 @@
+.text {
+  font-size: 70px;
+  font-weight: 800;
+  left: 25%;
+  letter-spacing: 10px;
+  line-height: 140px;
+  position: absolute;
+  text-align: center;
+  top: 20%;
+  width: 50%;
+
+  .active & {
+    .text__word {
+      animation: text .5s forwards;
+
+      &:nth-child(1) {
+        animation-delay: 32s;
+      }
+
+      &:nth-child(2) {
+        animation-delay: 32.15s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: 32.45s;
+      }
+
+      &:nth-child(4) {
+        animation-delay: 32.6s;
+      }
+
+      &:nth-child(5) {
+        animation-delay: 32.75s;
+      }
+    }
+  }
+
+  &__word {
+    color: $orange;
+    opacity: 0;
+  }
+}
+
+@keyframes text {
+  0% {
+    color: $orange;
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  90% {
+    color: $white;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
