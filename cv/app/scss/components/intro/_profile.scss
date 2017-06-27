@@ -1,0 +1,21 @@
+.profile {
+  font-size: 1.8rem;
+  line-height: 1;
+  margin-bottom: 3rem;
+  text-align: center;
+
+  &__figure {
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: 3rem;
+    letter-spacing: 2.5px;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  &__sub-head {
+    font-weight: 100;
+  }
+}

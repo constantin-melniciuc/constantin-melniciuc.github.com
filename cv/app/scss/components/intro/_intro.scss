@@ -1,0 +1,22 @@
+.intro {
+  @extend %flex-layout;
+  background: $black;
+  box-sizing: border-box;
+  color: $white;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: $gutter * 2;
+  width: 100%;
+
+  @include bp(baby-bear) {
+    width: 25%;
+  }
+
+  &--fixed {
+    @include bp(baby-bear) {
+      bottom: 0;
+      left: 0;
+      position: fixed;
+    }
+  }
+}

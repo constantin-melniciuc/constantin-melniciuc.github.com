@@ -1,0 +1,16 @@
+.in-contact {
+  font-size: 1.4rem;
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__line {
+    @extend %flex-layout;
+    margin: 1rem 0;
+  }
+}

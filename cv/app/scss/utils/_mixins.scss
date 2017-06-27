@@ -1,0 +1,18 @@
+%flex-layout {
+  align-items: stretch;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+@mixin bp($point) {
+  @if $point == papa-bear {
+    @media (max-width: 1200px) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media (min-width: 992px) { @content; }
+  }
+  @else if $point == baby-bear {
+    @media (min-width: 768px)  { @content; }
+  }
+}

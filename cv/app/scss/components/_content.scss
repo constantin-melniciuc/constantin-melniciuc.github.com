@@ -1,0 +1,11 @@
+.main {
+  align-self: flex-end;
+  box-sizing: border-box;
+  color: $black;
+  padding: $gutter * 2;
+  width: 100%;
+
+  @include bp(baby-bear) {
+    width: 75%;
+  }
+}

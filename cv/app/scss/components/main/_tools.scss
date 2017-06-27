@@ -1,0 +1,30 @@
+.tool {
+  font-size: 1.4rem;
+
+  &__level {
+    @extend %flex-layout;
+    justify-content: flex-start;
+    margin-left: $gutter / 2;
+  }
+
+  &__star {
+    border: .1rem solid $black;
+    border-radius: 1rem;
+    display: block;
+    height: .6rem;
+    margin: .25rem;
+    width: .6rem;
+
+    &--fill {
+      background-color: $black;
+    }
+  }
+
+  &__heading {
+    font-size: 1.5em;
+  }
+
+  &__item {
+    margin-bottom: 3rem;
+  }
+}

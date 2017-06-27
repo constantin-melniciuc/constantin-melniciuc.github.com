@@ -1,0 +1,68 @@
+html {
+  background-color: $white;
+  font-family: $font;
+  font-size: 10px;
+}
+
+img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+}
+
+a {
+  color: $pink;
+  display: inline-block;
+  padding-bottom: 1px;
+  position: relative;
+  text-decoration: none;
+
+  &:hover {
+    &::before,
+    &::after {
+      width: 0;
+    }
+  }
+
+  &::before,
+  &::after {
+    border-bottom: 1px solid;
+    bottom: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    transition: width .3s;
+    width: 50%;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+code {
+  background-color: rgba($black, .1);
+  border: 1px solid $black;
+  display: block;
+  margin: .5rem;
+  padding: 1rem;
+}
+
+.container {
+  @extend %flex-layout;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.inline-helper {
+  @extend %flex-layout;
+  align-items: center;
+  justify-content: flex-start;
+}
