@@ -32,7 +32,7 @@ gulp.task('sass', function() {
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
-      baseDir: 'app'
+      baseDir: './'
     },
   })
 })
@@ -40,6 +40,6 @@ gulp.task('browserSync', function() {
 
 gulp.task('watch', ['browserSync', 'sass'], function (){
   gulp.watch('app/scss/**/*.scss', ['sass']);
-  gulp.watch('app/*.html', browserSync.reload);
+  gulp.watch('./*.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
 });
