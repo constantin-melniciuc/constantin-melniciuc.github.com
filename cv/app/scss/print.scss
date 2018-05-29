@@ -1,18 +1,34 @@
 body {
-	font-size: 64px;
+  font-size: 64px;
 }
 
 .main {
-  margin-top: 100px;
+  margin-top: 1cm;
 }
 
 .section {
   &--skills {
-    padding-top: 3cm;
-    padding-bottom: 15cm;
+    margin-top: 12cm;
+    padding-bottom: 2cm;
+  }
+
+  &--projects {
+    margin-top: 10cm;
   }
 }
 
 .tool__level {
   display: none;
+}
+
+pre {
+  margin-bottom: .5cm;
+}
+
+.t-desc {
+  &__heading {
+    &--vue {
+      margin-top: 1cm;
+    }
+  }
 }
