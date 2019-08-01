@@ -2,20 +2,16 @@
   "name": "gulpsass",
   "version": "1.0.0",
   "description": "HTML and SASS template",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "/app/js/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/markomitranic/ZentZent.git"
   },
-  "author": "Marko Mitranic <marko.mitranic@gmail.com> (https://github.com/markomitranic)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/markomitranic/ZentZent/issues"
+  "author": "Constantin Melniciuc <costea22+github@gmail.com> (https://github.com/JoraCardan)",
+  "homepage": "https://joracardan.github.io/cv/",
+  "scripts": {
+    "start": "gulp watch"
   },
-  "homepage": "https://github.com/markomitranic/ZentZent#readme",
   "devDependencies": {
     "browser-sync": "^2.18.7",
     "gulp": "^3.9.1",
