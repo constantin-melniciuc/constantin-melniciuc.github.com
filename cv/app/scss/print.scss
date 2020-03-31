@@ -1,30 +1,54 @@
+@import './utils/settings';
+
+
 body {
   font-size: 64px;
 }
 
-.main {
-  margin-top: 1cm;
-}
-
 .section {
   &--skills {
-    margin-top: 12cm;
-    padding-bottom: 2cm;
+    padding-top: 9cm;
+    padding-bottom: 3cm;
   }
 
   &--projects {
-    margin-top: 10cm;
+    padding-top: 4cm;
   }
-}
-
-.tool__level {
-  display: none;
-}
-
-pre {
-  margin-bottom: .5cm;
 }
 
 .t-desc__heading--unit-tests {
   margin-top: 2.5cm;
 }
+
+.t-desc__heading--ci-cd {
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.tool {
+  &__level {
+    margin-bottom: 4px;
+  }
+
+  &__star {
+    display: none;
+    &--fill {
+      display: block;
+    }
+  }
+}
+
+.inline-helper {
+  align-items: flex-end;
+}
+
+.main {
+  padding: 4cm 4rem;
+}
+
+.print-me {
+  display: none;
+}
+
+@page { margin: 0 .5cm; }

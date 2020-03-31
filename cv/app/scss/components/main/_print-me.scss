@@ -1,0 +1,46 @@
+.print-me {
+  background: transparent;
+  border: 0;
+  color: $pink;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0;
+  position: fixed;
+  right: 2rem;
+  text-decoration: none;
+  top: 2rem;
+
+  &:hover {
+    &::before,
+    &::after {
+      width: 0;
+    }
+  }
+
+  &::before,
+  &::after {
+    border-bottom: 1px solid;
+    bottom: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    transition: width .3s;
+    width: 50%;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+
+  img {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: top;
+  }
+}

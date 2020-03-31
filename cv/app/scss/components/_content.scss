@@ -2,10 +2,11 @@
   align-self: flex-end;
   box-sizing: border-box;
   color: $black;
-  padding: $gutter * 2;
+  padding: $gutter * 2 14rem;
   width: 100%;
 
   @include bp(baby-bear) {
     width: 75%;
   }
+
 }
