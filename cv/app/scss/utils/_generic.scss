@@ -31,10 +31,10 @@ a {
   &::after {
     border-bottom: 1px solid;
     bottom: 0;
-    content: '';
+    content: "";
     display: block;
     position: absolute;
-    transition: width .3s;
+    transition: width 0.3s;
     width: 50%;
   }
 
@@ -48,10 +48,10 @@ a {
 }
 
 code {
-  background-color: rgba($black, .1);
+  background-color: rgba($black, 0.1);
   border: 1px solid $black;
   display: block;
-  margin: .5rem;
+  margin: 0.5rem;
   padding: 1rem;
 }
 
@@ -65,4 +65,5 @@ code {
   @extend %flex-layout;
   align-items: center;
   justify-content: flex-start;
+  margin-bottom: 1em;
 }

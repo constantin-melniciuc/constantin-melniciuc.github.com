@@ -1,5 +1,4 @@
-@import './utils/settings';
-
+@import "./utils/settings";
 
 body {
   font-size: 64px;
@@ -7,23 +6,19 @@ body {
 
 .section {
   &--skills {
-    padding-top: 9cm;
-    padding-bottom: 3cm;
+    // padding-bottom: 3cm;
+    margin-bottom: 0;
   }
+}
 
-  &--projects {
+.skill__item {
+  &--yc {
     padding-top: 4cm;
   }
-}
 
-.t-desc__heading--unit-tests {
-  margin-top: 2.5cm;
-}
-
-.t-desc__heading--ci-cd {
-  padding-top: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  &--tap-battle {
+    padding-bottom: 2.5cm;
+  }
 }
 
 .tool {
@@ -39,16 +34,24 @@ body {
   }
 }
 
+.t-desc__heading {
+  &--ci-cd {
+    padding-top: 4cm;
+  }
+}
+
 .inline-helper {
   align-items: flex-end;
 }
 
 .main {
-  padding: 4cm 4rem;
+  padding: 4cm 4rem 0;
 }
 
 .print-me {
   display: none;
 }
 
-@page { margin: 0 .5cm; }
+@page {
+  margin: 0 0.5cm;
+}

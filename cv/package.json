@@ -10,16 +10,17 @@
   "author": "Constantin Melniciuc <costea22+github@gmail.com> (https://github.com/JoraCardan)",
   "homepage": "https://joracardan.github.io/cv/",
   "scripts": {
-    "start": "gulp watch"
+    "start": "gulp default"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.7",
+    "browser-sync": "^2.27.7",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^3.1.1",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.4.1",
-    "htmllint-cli": "^0.0.7"
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "htmllint-cli": "^0.0.7",
+    "node-sass": "^7.0.1"
   }
 }
